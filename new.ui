@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>349</width>
+    <height>363</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TOOL</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(20, 21, 23)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="tab_update">
+    <property name="geometry">
+     <rect>
+      <x>97</x>
+      <y>10</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(31,32,34);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+    </property>
+    <property name="text">
+     <string>Update Keys</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tab_delete">
+    <property name="geometry">
+     <rect>
+      <x>184</x>
+      <y>10</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(31,32,34);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+    </property>
+    <property name="text">
+     <string>Delete Keys</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tab_encrypt">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(31,32,34);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+    </property>
+    <property name="text">
+     <string>Encrypt USB</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>361</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <widget class="QLineEdit" name="confirm">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>120</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color: rgb(16, 14, 25);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-4</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Enter your new key</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="key">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color: rgb(16, 14, 25);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>80</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Confirm Your key</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnEncrypt">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>170</y>
+         <width>331</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(31,32,34);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+       </property>
+       <property name="text">
+        <string>Encrypt</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <widget class="QLineEdit" name="uexkey">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>34</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color: rgb(16, 14, 25);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-6</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Enter existing key</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnUpdate">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>230</y>
+         <width>331</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(31,32,34);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+       </property>
+       <property name="text">
+        <string>Update</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>74</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Enter your new key</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ukey">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>114</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color: rgb(16, 14, 25);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="uconfirm">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>190</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color: rgb(16, 14, 25);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>150</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Confirm Your key</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QWidget" name="widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <widget class="QLineEdit" name="dexkey">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>34</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color: rgb(16, 14, 25);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDelete">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>80</y>
+         <width>331</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(31,32,34);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-6</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Enter existing key</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QWidget" name="widget_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>331</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <widget class="QLineEdit" name="txtdecrypt">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>34</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QLineEdit {
+    color: rgb(185, 35, 250);
+	background-color: rgb(16, 14, 25);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QLineEdit:focus {
+    border: 1px solid rgb(255, 48, 245);
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnDecrypt">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>80</y>
+         <width>331</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(31,32,34);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+       </property>
+       <property name="text">
+        <string>Decrypt</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-6</y>
+         <width>331</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Enter existing key</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>331</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+
+QComboBox {
+    color: rgb(185, 35, 250);
+	background-color: rgb(16, 14, 25);
+	border-radius:5px;
+	border: 1px solid rgb(94, 62, 94);
+}
+QComboBox:focus {
+    border: 1px solid rgb(255, 48, 245);
+color: rgb(185, 35, 250);
+}</string>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string>        Select your drive</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="tab_decrypt">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>10</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+
+QPushButton {
+    color: rgb(108, 109, 114);
+	background-color: rgb(31,32,34);
+	border-radius:5px;
+}
+
+QPushButton:hover {
+    border: 1px solid rgb(255, 48, 245);
+}
+QPushButton:pressed {
+                
+	background-color: rgb(185, 35, 250);
+                color: rgb(16, 14, 25);
+            }</string>
+    </property>
+    <property name="text">
+     <string>Decrypt file</string>
+    </property>
+   </widget>
+   <zorder>stackedWidget</zorder>
+   <zorder>tab_update</zorder>
+   <zorder>tab_delete</zorder>
+   <zorder>tab_encrypt</zorder>
+   <zorder>comboBox</zorder>
+   <zorder>tab_decrypt</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
